@@ -23,11 +23,22 @@
     /* opacity: 0.7; */
   }
 
+  /* STYLE CLASSES */
+
   .form-container {
-      height: 10rem;
+      /* height: 20%; */
       margin: 5rem;
+      /* border: 1px solid blue; */
   }
 
-  .input-field {
+  .search-container {
+    height: 30%;
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .input-field, label {
+      width: 90%;
       height: 2rem;
+      margin: 1rem;
   }

@@ -18,7 +18,7 @@ import { resMessage } from '../utilities/functions.utilities'
 // import searchTerm from './Search'
 
 //CSS
-// import '../css/SearchForm.css'
+import '../css/SearchForm.css'
 
 const axios = require('axios')
 const GOOGLE_API_KEY = 'AIzaSyDbjklIejS9yn5KhRaEWen72vYpBu_0BZo'
@@ -124,7 +124,7 @@ const SearchForm = (props) => {
 
     return(
             <div className='form-container container'>
-                <Form onSubmit={mapSearch} ref={form} className='container'>
+                <Form onSubmit={mapSearch} ref={form} className='search-container'>
                 <div className='input-field'>
                     <CountryDropdown
                         className='browser-default'

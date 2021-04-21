@@ -9,7 +9,7 @@ import Loading from './common/Loading';
 import useSWR from "swr";
 import { getOneLocation } from '../services/location.services'
 
-
+import '../css/Search.css'
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmluYXJ5YmVhc3QiLCJhIjoiY2tpbTU3cW8xMHE1ZTJycXJkemdjZThmMSJ9.LUCLnUpyYjcUF48GPUEUVQ'
 
@@ -256,7 +256,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmluYXJ5YmVhc3QiLCJhIjoiY2tpbTU3cW8xMHE1ZTJyc
 
     return (
       <>
-      <div className="map-container" ref={mapContainerRef} />
+        <div className="map-container" ref={mapContainerRef} />
       </>
       );
   }
