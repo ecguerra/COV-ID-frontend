@@ -2,21 +2,8 @@
 ## Binary Beasts
 
 [Front End Deployed Site](https://cov-id.netlify.app/)
-(buggy, review full site on local for now)
 
 ![Landing Page](/cov-id_landingpage.png)
-
-
-FRONTEND
-- [x] Screenshot of landing page
-- [] link to deployed frontend app
-- [x] link to backend repo
-- [x] wireframes
-- [x] user stories
-- [x] explanation of frontend tech used
-- [] general approach (a couple paragraphs)
-- [x] installation instructions
-- [] unsolved problems / major hurdles
 
 [Backend Repo](https://github.com/SFX818/Team-6-backend)
 
