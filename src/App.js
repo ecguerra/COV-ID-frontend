@@ -1,7 +1,7 @@
 import {Switch, Route} from 'react-router-dom'
 
 //Component Imports
-import Search from './components/Search'
+// import Search from './components/Search'
 import SearchForm from './components/SearchForm'
 import SearchDetail from './components/SearchDetail'
 // import New from "./components/New"

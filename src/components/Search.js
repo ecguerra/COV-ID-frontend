@@ -4,8 +4,8 @@ import mapboxgl from 'mapbox-gl';
 // import 'mapbox-gl/dist/mapbox-gl.css';
 // import SearchForm from "./SearchForm";
 import SearchPopup from './SearchPopup'
-import axios from "axios";
-import Loading from './common/Loading';
+// import axios from "axios";
+// import Loading from './common/Loading';
 import useSWR from "swr";
 import { getOneLocation } from '../services/location.services'
 
@@ -15,15 +15,15 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYmluYXJ5YmVhc3QiLCJhIjoiY2tpbTU3cW8xMHE1ZTJyc
 
 
   function Search(id, city) {
-    const [searchTerm, setSearchTerm] = useState(null)
+    // const [searchTerm, setSearchTerm] = useState(null)
     const [zoom, setZoom] = useState(2.5)
     const [center, setCenter] = useState([-104.9876, 39.7405])
 
-    const [searchCountry, setSearchCountry] = useState('')
-    const [searchRegion, setSearchRegion] = useState('')
-    const [searchCounty, setSearchCounty] = useState('')
-    const [searchCity, setSearchCity] = useState(city)
-    const [searchId, setSearchId] = useState(id)
+    // const [searchCountry, setSearchCountry] = useState('')
+    // const [searchRegion, setSearchRegion] = useState('')
+    // const [searchCounty, setSearchCounty] = useState('')
+    // const [searchCity, setSearchCity] = useState(city)
+    // const [searchId, setSearchId] = useState(id)
     const [searchLocation, setSearchLocation] = useState('')
     const [searchUrl, setSearchUrl] = useState('https://disease.sh/v3/covid-19/jhucsse')
     
