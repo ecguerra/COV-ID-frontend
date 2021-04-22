@@ -23,19 +23,19 @@ export const testRoute = userToken => {
 
 // --- ADMIN ROUTES --- //
 export const getAllUsers = () => {
-    return axios.get(API_URL_ADMIN + 'users/all', {headers: authHeader()})
+    return axios.get(`${API_URL_ADMIN}users/all`, {headers: authHeader()})
 }
 
 export const getOneUser = id => {
-    return axios.get(API_URL_ADMIN + 'users/' + id, {headers: authHeader()})
+    return axios.get(`${API_URL_ADMIN}users/${id}`, {headers: authHeader()})
 }
 
 export const getRoles = () => {
-    return axios.get(API_URL_ADMIN + 'roles', {headers: authHeader()})
+    return axios.get(`${API_URL_ADMIN}roles`, {headers: authHeader()})
 }
 
 export const addUserRoles = (id,roles) => {
-    return axios.put(API_URL_ADMIN + 'users/' + id, {
+    return axios.put(`${API_URL_ADMIN}users/${id}`, {
         roles: roles
     },
         {headers: authHeader()}
@@ -43,7 +43,7 @@ export const addUserRoles = (id,roles) => {
 }
 
 export const removeUserRoles = (id,roles) => {
-    return axios.put(API_URL_ADMIN + 'users/' + id + '/remove', {
+    return axios.put(`${API_URL_ADMIN}users/${id}/remove`, {
         roles: roles
     },
         {headers: authHeader()}
@@ -53,7 +53,7 @@ export const removeUserRoles = (id,roles) => {
 export const deleteUser = id => {
     return axios({
         method: 'DELETE',
-        url: API_URL_ADMIN + 'users/' + id +'/delete',
+        url: `${API_URL_ADMIN}users/${id}/delete`,
         headers: authHeader()
     },
     {_id: id}
@@ -63,7 +63,7 @@ export const deleteUser = id => {
 
 // --- USER DASHBOARD ROUTES --- //
 export const getFavorites = () => {
-    return axios.get(API_URL_DASHBOARD + 'favorites',{headers: authHeader()})
+    return axios.get(`${API_URL_DASHBOARD}favorites`,{headers: authHeader()})
     .then(response => {
         return(response.data)
     })
@@ -71,7 +71,7 @@ export const getFavorites = () => {
 }
 
 export const getPrimaryLocation = () => {
-    return axios.get(API_URL_DASHBOARD + 'primary-location',{headers: authHeader()})
+    return axios.get(`${API_URL_DASHBOARD}primary-location`,{headers: authHeader()})
     .then(response => {
         return response.data
     })
@@ -79,7 +79,7 @@ export const getPrimaryLocation = () => {
 }
 
 export const getHistory = () => {
-    return axios.get(API_URL_DASHBOARD + 'history',{headers: authHeader()})
+    return axios.get(`${API_URL_DASHBOARD}history`,{headers: authHeader()})
     .then(response => {
         return(response.data)
     })
@@ -87,7 +87,7 @@ export const getHistory = () => {
 }
 
 export const editPrimary = (user,id,city,state,country,county) => {
-    return axios.put(API_URL_DASHBOARD + 'edit/' + user, {
+    return axios.put(`${API_URL_DASHBOARD}edit/${user}`, {
         id: id,
         city: city,
         state: state,
@@ -99,11 +99,11 @@ export const editPrimary = (user,id,city,state,country,county) => {
 }
 
 export const removeFavorite = (id) => {
-    return axios.delete(API_URL_DASHBOARD + 'favorites/remove/' + id, {headers: authHeader()})
+    return axios.delete(`${API_URL_DASHBOARD}favorites/remove/${id}`, {headers: authHeader()})
 }
 
 export const addFavorite = (user, id) => {
-    return axios.post(API_URL_OSEARCH + id, {
+    return axios.post(`${API_URL_OSEARCH}${id}`, {
         user,
         id
     },
@@ -113,7 +113,7 @@ export const addFavorite = (user, id) => {
 
 // Removes location in index[0] of search history array
 export const removeFromSearchHistory = user => {
-    return axios.put(API_URL_DASHBOARD + 'history/remove', {
+    return axios.put(`${API_URL_DASHBOARD}history/remove`, {
         user
     }, 
         {headers: authHeader()}

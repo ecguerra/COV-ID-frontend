@@ -6,7 +6,7 @@ const API_URL = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_D
 
 //Function to register users
 export const register = (username, email, password, country, region, city, county) => {
-    return axios.post(API_URL + "signup", {
+    return axios.post(`${API_URL}signup`, {
         username,
         email,
         password,
@@ -20,7 +20,7 @@ export const register = (username, email, password, country, region, city, count
 
 //Log in the user
 export const login = (username, password) => {
-    return axios.post(API_URL + "signin", {
+    return axios.post(`${API_URL}signin`, {
         username,
         password
     })

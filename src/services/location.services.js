@@ -17,12 +17,12 @@ export const locationSearch = (country,region,city,county) => {
 
 //Find location by id
 export const getOneLocation = id => {
-    return axios.get(API_URL_SEARCH + id, {headers: authHeader()})
+    return axios.get(`${API_URL_SEARCH}id`, {headers: authHeader()})
 }
 
 // --- Do we need this one?
 export const updateLocation = (id,city,state,country,county, roles) => {
-    return axios.put(API_URL_SEARCH + id, {
+    return axios.put(`${API_URL_SEARCH}id`, {
         id,
         city,
         state,
@@ -34,7 +34,7 @@ export const updateLocation = (id,city,state,country,county, roles) => {
 
 // Adds search to user's search history
 export const addToSearchHistory = id => {
-    return axios.post(API_URL_SEARCH + 'search/' + id, {
+    return axios.post(`${API_URL_SEARCH}search/${id}`, {
         id
     },
         {headers: authHeader()}
